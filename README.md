@@ -13,13 +13,11 @@ A novel explainability framework that combines SHAP and LIME for time-series mod
 ## 🏗️ Project Structure
 
 ```
-shap-lime/
+tsxai/
 ├── app/
-│   ├── streamlit_app.py      # Main Streamlit dashboard
-│   └── components/           # UI components
+│   └── streamlit_app.py      # Main Streamlit dashboard
 ├── data/
-│   ├── raw/                  # Raw datasets
-│   └── processed/            # Processed features
+│   └── raw/                  # Raw datasets
 ├── explainers/
 │   ├── base_explainer.py     # Base explainer class
 │   ├── temporal_shap.py      # Temporal-aware SHAP
@@ -35,11 +33,21 @@ shap-lime/
 │   ├── feature_engineering.py # Temporal feature creation
 │   ├── metrics.py            # Evaluation metrics
 │   └── visualization.py      # Plotting utilities
-├── notebooks/
-│   └── exploration.ipynb     # Data exploration
+├── tests/                    # Unit tests
+│   ├── test_models.py
+│   ├── test_explainers.py
+│   ├── test_feature_engineering.py
+│   └── test_metrics.py
+├── scripts/
+│   ├── generate_demo_data.py
+│   └── test_installation.py
 ├── results/
 │   └── precomputed/          # Pre-computed explanations
+├── .github/
+│   └── workflows/ci.yml      # GitHub Actions CI
+├── pyproject.toml            # Project configuration
 ├── requirements.txt
+├── LICENSE
 └── README.md
 ```
 
